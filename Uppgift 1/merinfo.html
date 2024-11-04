@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- importerar ett script från font awesome för att kunna använda ikoner därifrån -->
+    <script
+      src="https://kit.fontawesome.com/7540058e1a.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -30,95 +35,100 @@
       </ul>
     </nav>
 
-    <!-- Sökformulär -->
-    <form>
-      <h2>Sök en film</h2>
-      <!-- label och ruta för att skriva in sökord -->
-      <div class="sokruta">
-        <label for="sokord">Sökord</label>
-        <input type="text" id="sokord" />
-      </div>
+    <article id="startsida-merinfo">
+      <div class="content">
+        <!-- Sökformulär -->
+        <form class="sokruta" id="merinfo-sokformular">
+          <h2>Sök en film</h2>
+          <input type="text" placeholder="Sök..." name="search" id="sokord" />
+          <!-- Knapp för att skicka -->
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <!-- <article id="startsida-topplista">
+          <h2>Populäraste filmerna just nu</h2>
+          <ul id="top-list"></ul>
+        </article> -->
 
-      <!-- Knapp för att skicka -->
-      <button type="submit">Sök</button>
-    </form>
-
-    <!-- Huvudinnehåll med article för information, aside med bild och
+        <!-- Huvudinnehåll med article för information, aside med bild och
    formulär för recension -->
-    <div id="merinfo-huvudinnehall">
-      <!-- Article med information -->
-      <article id="merinfo-article">
-        <h2>Älgen simmar söderut</h2>
-        <p class="tagline">"Det visste du inte om Hälge"</p>
-        <p>Betyg 4,5</p>
-        <section>
-          <h3>Handling</h3>
-          <p>
-            Hälge är ingen vanlig älg, han är nämligen en flyttälg. Det är inte
-            så många som vet om det, och faktiskt så är det en hemlighet. I
-            likhet med flyttfåglarna flyttar Hälge söderut över vintern. Han ger
-            sig av strax innan älgjakten på hösten och kommer tillbaka på våren.
-            Han flyger dock inte, såklart, utan han simmar. Men en höst har han
-            tappat bort sina simpuffar. Hur ska det gå? Kommer Hälge att komma
-            iväg innan jakten? Följ äventyret och dela spänningen i den nya
-            tecknade succéfilmen!
-          </p>
-        </section>
+        <div id="merinfo-huvudinnehall">
+          <!-- Article med information -->
+          <article id="merinfo-article">
+            <h2>Älgen simmar söderut</h2>
+            <p class="tagline">"Det visste du inte om Hälge"</p>
+            <p>Betyg 4,5</p>
+            <section>
+              <h3>Handling</h3>
+              <p>
+                Hälge är ingen vanlig älg, han är nämligen en flyttälg. Det är
+                inte så många som vet om det, och faktiskt så är det en
+                hemlighet. I likhet med flyttfåglarna flyttar Hälge söderut över
+                vintern. Han ger sig av strax innan älgjakten på hösten och
+                kommer tillbaka på våren. Han flyger dock inte, såklart, utan
+                han simmar. Men en höst har han tappat bort sina simpuffar. Hur
+                ska det gå? Kommer Hälge att komma iväg innan jakten? Följ
+                äventyret och dela spänningen i den nya tecknade succéfilmen!
+              </p>
+            </section>
 
-        <section>
-          <h3>Skådespelare</h3>
-          <ul>
-            <li>Äskil Älg som Hälge</li>
-            <li>Karolina Kalv som Hälges dotter Fridolina</li>
-            <li>Styrbjörn Sjöbjörn som Sune Skeppare</li>
-            <li>Underlige Ulf som Jägaren Jubelåsna</li>
-          </ul>
-        </section>
-      </article>
+            <section>
+              <h3>Skådespelare</h3>
+              <ul>
+                <li>Äskil Älg som Hälge</li>
+                <li>Karolina Kalv som Hälges dotter Fridolina</li>
+                <li>Styrbjörn Sjöbjörn som Sune Skeppare</li>
+                <li>Underlige Ulf som Jägaren Jubelåsna</li>
+              </ul>
+            </section>
+          </article>
 
-      <!-- Aside med bild -->
-      <aside id="merinfo-aside">
-        <h3>3. Älgen simmar söderut</h3>
+          <!-- Aside med bild -->
+          <aside id="merinfo-aside">
+            <h3>3. Älgen simmar söderut</h3>
 
-        <img
-          id="algbild"
-          src="bilder/algbild.jpg"
-          alt="älg"
-          height="500"
-          width="500"
-        />
+            <img
+              id="algbild"
+              src="bilder/algbild.jpg"
+              alt="älg"
+              height="500"
+              width="500"
+            />
 
-        <p class="tagline">"Det visste du inte om Hälge"</p>
-      </aside>
+            <p class="tagline">"Det visste du inte om Hälge"</p>
+          </aside>
 
-      <!-- Formulär för recension -->
-      <form id="merinfo-recensionsformular">
-        <h2>Recensera den här filmen</h2>
+          <!-- Formulär för recension -->
+          <form id="merinfo-recensionsformular">
+            <h2>Recensera den här filmen</h2>
 
-        <div class="">
-          <!-- label och ruta för att skriva in namn -->
-          <label for="namn">Ditt namn</label>
-          <input type="text" id="namn" />
-          <!-- label och flerradig textruta för att skriva recension -->
-          <label for="recension">Din recension</label>
-          <textarea rows="20" id="recension"></textarea>
+            <div class="">
+              <!-- label och ruta för att skriva in namn -->
+              <label for="namn">Ditt namn</label>
+              <input type="text" id="namn" />
+              <!-- label och flerradig textruta för att skriva recension -->
+              <label for="recension">Din recension</label>
+              <textarea rows="20" id="recension"></textarea>
+            </div>
+
+            <!-- betygsätta -->
+            <div class="kort-betygsattingsmodul">
+              <p class="kort-betygsatt">Ditt betyg på filmen</p>
+              <div className="button-group">
+                <button class="rosta rosta_minus_1">-1</button>
+                <button class="rosta rosta_1">1</button>
+                <button class="rosta rosta_2">2</button>
+                <button class="rosta rosta_3">3</button>
+                <button class="rosta rosta_4">4</button>
+                <button class="rosta rosta_5">5</button>
+              </div>
+            </div>
+
+            <!-- Knapp för att skicka -->
+            <button type="submit">Publicera</button>
+          </form>
         </div>
-
-        <!-- betygsätta -->
-        <div class="kort-betygsattingsmodul">
-          <p class="kort-betygsatt">Ditt betyg på filmen</p>
-          <button class="rosta">-1</button>
-          <button class="rosta">1</button>
-          <button class="rosta">2</button>
-          <button class="rosta">3</button>
-          <button class="rosta">4</button>
-          <button class="rosta">5</button>
-        </div>
-
-        <!-- Knapp för att skicka -->
-        <button type="submit">Publicera</button>
-      </form>
-    </div>
+      </div>
+    </article>
 
     <!-- footer med kontaktuppgifter och bildreferens -->
     <footer>
@@ -141,5 +151,7 @@
         </p>
       </div>
     </footer>
+
+    <script type="module" src="js/merinfo/merinfo.js" defer></script>
   </body>
 </html>
