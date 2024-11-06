@@ -73,6 +73,32 @@ article#startsida-merinfo {
   background-color: #f1e3f3;
 }
 
+.kort-sokresultat {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #c5d8d1;
+  border-radius: 15%;
+}
+
+.kort-sokresultat > h3 {
+  font-size: larger;
+  padding: 20px;
+}
+
+#sokresultat-lista {
+  list-style-type: none;
+}
+
+.filmposter {
+  width: 150px;
+  height: 225px;
+  margin: 10px;
+}
+
 /* #sokresultat-huvudinnehall > article {
   padding: 20px;
   border: 1px solid black;
@@ -416,14 +442,45 @@ form.sokruta::after {
   scale: 101%;
 }
 
+li > .superstort {
+  background-color: #c5d8d1;
+
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+}
+
 li > .stora {
-  background-color: greenyellow;
+  background-color: #c5d8d1;
+
+  border: 2px solid black;
+  padding: 10px;
   border-radius: 15px;
 }
 
 li > .lilla {
-  background-color: orchid;
+  background-color: #dbdee2;
+  border: 2px solid black;
+  padding: 10px;
   border-radius: 15px;
+}
+
+.kort-media-titel-superstort {
+  font-size: 62px;
+  padding-top: 20px;
+}
+
+.kort-media-titel-stora {
+  font-size: 45px;
+  padding-top: 20px;
+}
+
+.kort-media-titel-mindre {
+  padding-top: 20px;
+}
+
+.kort-media-tagline {
+  font-style: italic;
 }
 
 .kort-media-link {
@@ -433,13 +490,26 @@ li > .lilla {
 
 .kort-media {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 1rem;
 }
 
 .kort-media-poster img {
+  width: 100px;
+  height: 150px;
+  margin: 10px;
+}
+
+.kort-media-poster-stora img {
   width: 150px;
   height: 225px;
+  margin: 10px;
+}
+
+.kort-media-poster-superstort img {
+  width: 225px;
+  height: 340px;
+  margin: 10px;
 }
 
 #lejonbild {

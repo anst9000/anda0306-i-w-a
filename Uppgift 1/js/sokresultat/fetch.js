@@ -18,7 +18,7 @@ export async function sokEfterTitel() {
     const response = await fetch(URI)
 
     const sokResultat = await response.json()
-    return sokResultat
+    return sokResultat.Search
   } catch (err) {
     console.error("Någonting blev fel")
   }
